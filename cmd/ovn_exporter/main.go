@@ -190,7 +190,7 @@ func main() {
 
 	exporter, err = ovn.ExporterPerformClientCalls(exporter)
 	if err != nil {
-		level.Error(logger).Log(
+		level.Debug(logger).Log(
 			"msg", "failed to finalize exporter calls properly",
 			"exporter_name", ovn.GetExporterName(),
 			"error", err.Error(),
